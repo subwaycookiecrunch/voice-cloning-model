@@ -1,0 +1,78 @@
+# Step-by-Step Voice Cloning Guide for MP3 Files
+
+## Step 1: Create Proper Folder Structure
+1. Create these folders if they don't exist:
+   - C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset
+   - C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset\target
+   - C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset\source
+
+## Step 2: Prepare Your MP3 Voice File
+1. Find the MP3 file you want to clone
+2. Copy it to C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset\target
+3. Make sure the MP3 file has a .mp3 extension
+4. For best results, your MP3 file should:
+   - Be clear with minimal background noise
+   - Contain at least 1-2 minutes of speech
+   - Be of reasonable quality (128kbps or higher)
+
+## Step 3: Run the Application
+1. Open Command Prompt
+2. Navigate to your project folder:
+   ```
+   cd C:\Users\raj97\OneDrive\Desktop\voice-cloning
+   ```
+3. Run the application:
+   ```
+   python voice_cloning_app.py
+   ```
+
+## Step 4: Import the Target Voice in the Application
+1. In the "Data Collection" tab:
+   - Click "Browse" next to "Target Voice (Voice to Clone)"
+   - Navigate to C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset\target
+   - Select the folder (not the MP3 file itself)
+   - Click "Import Target Voice Data"
+
+## Step 5: Add Source Voice Data (Required)
+1. Option 1 - Record your voice directly:
+   - In the "Data Collection" tab, under "Source Voice"
+   - Click "Start Recording"
+   - Speak clearly for at least 30 seconds
+   - Click "Stop Recording"
+   - Click "Import Source Voice Data"
+
+2. Option 2 - Use existing recordings:
+   - Place your audio files in C:\Users\raj97\OneDrive\Desktop\voice-cloning\dataset\source
+   - In the application, browse to this folder
+   - Click "Import Source Voice Data"
+
+## Step 6: Train the Model
+1. Go to the "Training" tab
+2. Enter a model name (e.g., "my_voice_model")
+3. Set training epochs (start with 100)
+4. Click "Start Training"
+5. Wait for training to complete
+
+## Step 7: Use the Trained Model
+1. Go to the "Voice Conversion" tab
+2. Click "Load Trained Model"
+3. Choose your trained model
+4. Click "Record for Conversion" or "Convert from File"
+5. Adjust pitch if needed
+6. Click "Play Converted" to hear the result
+
+## Troubleshooting:
+- If "Import Target Voice Data" fails:
+  - Check that your MP3 file is in the correct folder
+  - Try converting your MP3 to WAV format first
+  - Ensure the MP3 file isn't corrupted
+
+- If training fails:
+  - Ensure both target and source data are properly imported
+  - Check for error messages in the console
+  - Make sure you have enough disk space
+
+- If conversion doesn't sound good:
+  - Try adjusting the pitch shift
+  - Provide more training data
+  - Increase the number of training epochs 
